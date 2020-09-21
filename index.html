@@ -30,7 +30,7 @@
             position: absolute;
             top: 170px;
             left: 300px;
-            background-color:rgb(56, 173, 40);
+            background-color: rgb(56, 173, 40);
             border: none;
             color: white;
             padding: 15px 32px;
@@ -46,7 +46,7 @@
             position: absolute;
             top: 170px;
             left: 630px;
-            background-color:rgb(147, 12, 151);
+            background-color: rgb(147, 12, 151);
             border: none;
             color: white;
             padding: 15px 32px;
@@ -94,6 +94,31 @@
             opacity: 0;
             visibility: hidden;
         }
+
+        a:link {
+            color: rgb(47, 173, 204);
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: white;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: black;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+
+        a:active {
+            color: black;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+
 
         img {
             border-radius: 50%;
@@ -322,7 +347,7 @@
             padding: 3px;
             background-color: rgb(22, 153, 170);
             font-size: 50px;
-            color:white;
+            color: white;
             text-shadow: 2px 2px 4px #000000;
             text-align: center;
         }
@@ -336,45 +361,45 @@
         }
 
         var ev_other = 2;
-       $(document).ready(function () {
+        $(document).ready(function () {
             $(".hello, .contact, .pic, .work, .languages, .coursework").each(function () {
                 ev_other++;
                 var obj_top = $(this).position().top;
                 var window_end = $(window).scrollTop() + $(window).height();
-                
+
                 if (window.getComputedStyle(this).visibility === "hidden" && window_end > obj_top) {
                     this.style.visibility = "visible";
                     $(this).animate({ 'opacity': '1' });
                     if (ev_other % 2 != 0) {
-                        $(this).animate({ top: '-=60px'}, { duration: 500, easing: 'linear' });
+                        $(this).animate({ top: '-=60px' }, { duration: 500, easing: 'linear' });
                     }
                     else {
-                        $(this).delay(300).animate({ top: '-=60px'}, { duration: 500, easing: 'linear' });
+                        $(this).delay(300).animate({ top: '-=60px' }, { duration: 500, easing: 'linear' });
                     }
                 }
             });
         });
 
-      $(document).ready(function () {
-         $(window).scroll(function () {
-            $(".hello, .contact, .pic, .work, .languages, .coursework").each(function () {
-                ev_other++;
-                var obj_top = $(this).position().top;
-                var window_end = $(window).scrollTop() + $(window).height();
-                
-                if (window.getComputedStyle(this).visibility === "hidden" && window_end > obj_top) {
-                    this.style.visibility = "visible";
-                    $(this).animate({ 'opacity': '1' });
-                    if (ev_other % 2 != 0) {
-                        $(this).animate({ top: '-=60px'}, { duration: 500, easing: 'linear' });
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                $(".hello, .contact, .pic, .work, .languages, .coursework").each(function () {
+                    ev_other++;
+                    var obj_top = $(this).position().top;
+                    var window_end = $(window).scrollTop() + $(window).height();
+
+                    if (window.getComputedStyle(this).visibility === "hidden" && window_end > obj_top) {
+                        this.style.visibility = "visible";
+                        $(this).animate({ 'opacity': '1' });
+                        if (ev_other % 2 != 0) {
+                            $(this).animate({ top: '-=60px' }, { duration: 500, easing: 'linear' });
+                        }
+                        else {
+                            $(this).delay(300).animate({ top: '-=60px' }, { duration: 500, easing: 'linear' });
+                        }
                     }
-                    else {
-                        $(this).delay(300).animate({ top: '-=60px'}, { duration: 500, easing: 'linear' });
-                    }
-                }
+                });
             });
         });
-    });
     </script>
 </head>
 
@@ -392,9 +417,9 @@
     <button class="lang_course_Button" onclick="langCourseScroll()">
         Languages / Coursework
     </button>
-
-    <button class="resumeButton" onclick = "window.location.href='www.adventuresinodyssey.com';">
-        Resume
+    <!--<p><a href="https://www.google.com/">Google</a></p>
+    <button onclick="document.location='default.asp'">HTML Tutorial</button>-->
+    <button class="resumeButton" onclick= "document.location='http://www.keepandshare.com/doc29/view.php?id=111180&da=y'">Resume</a>
     </button>
 
     <div class="hello">
@@ -407,13 +432,11 @@
     </div>
 
     <div class="contact">
-        <p>
             <br><br><br><br><br><br>
-            pamelamkpk2015@gmail.com <br><br>
-            832-228-7183<br><br>
-            https://www.linkedin.com/in/pamela-lim-539066194 <br><br>
-            https://github.com/pamelamkpk
-        </p>
+            <p>832-228-7183</p>
+            <p><a href="mailto:pamelamkpk2015@gmail.com">pamelamkpk2015@gmail.com</a></p>
+            <p><a href="https://www.linkedin.com/in/pamela-lim-539066194">https://www.linkedin.com/in/pamela-lim-539066194/</a></p> 
+            <p><a href="https://github.com/pamelamkpk">https://github.com/pamelamkpk</a></p>
         <div class="triangle-right">
         </div>
         <div class="contact_title">
@@ -423,7 +446,9 @@
 
     <div class="work">
         <div class="V_title">
-            <p>Software Development Intern at Velentium</p>
+            <p>Software Development Intern at 
+                <a href="https://www.velentium.com/">Velentium</a>
+            </p>
         </div>
         <div class="V_desc">
             <p>Programmed and tested medical device software</p>
@@ -479,7 +504,7 @@
             <p>
                 Languages
             </p>
-        </div>    
+        </div>
         <ul class="a">
             <br>
             <li>
@@ -508,13 +533,13 @@
             </li>
         </ul>
     </div>
-    
+
     <div class="coursework">
         <div class="coursework_title">
             <p>
                 Coursework
             </p>
-        </div>    
+        </div>
         <ul class="a">
             <br>
             <li>
