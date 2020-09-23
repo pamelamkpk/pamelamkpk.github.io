@@ -29,7 +29,7 @@
         .workButton {
             position: absolute;
             top: 170px;
-            left: 300px;
+            left: 200px;
             background-color: rgb(56, 173, 40);
             border: none;
             color: white;
@@ -45,8 +45,24 @@
         .lang_course_Button {
             position: absolute;
             top: 170px;
-            left: 630px;
+            left: 530px;
             background-color: rgb(147, 12, 151);
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .about_Button {
+            position: absolute;
+            top: 170px;
+            left: 910px;
+            background-color: rgb(12, 21, 151);
             border: none;
             color: white;
             padding: 15px 32px;
@@ -61,7 +77,7 @@
         .resumeButton {
             position: absolute;
             top: 170px;
-            left: 1010px;
+            left: 1160px;
             background-color: #328a35;
             border: none;
             color: white;
@@ -132,6 +148,7 @@
             width: 300px;
             opacity: 0;
             visibility: hidden;
+            border-top-left-radius: 50px;
         }
 
         .triangle-right {
@@ -236,6 +253,7 @@
             font-family: 'Courier New';
             font-size: 40px;
             line-height: 1.3;
+            text-align: center;
             left: 100px;
             top: 30px;
             color: rgb(28, 107, 226);
@@ -246,6 +264,7 @@
             font-family: 'Courier New';
             font-size: 40px;
             line-height: 1.3;
+            text-align: center;
             left: 150px;
             top: 30px;
             color: rgb(28, 107, 226);
@@ -312,6 +331,72 @@
             color: white;
         }
 
+        div.about {
+            position: absolute;
+            font-family: "Ink Free";
+            font-size: 60px;
+            top: 2500px;
+            left: 600px;
+            background-color: black;
+            height: 50px;
+            width: 500px;
+            padding: 50px;
+            color: white;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        div.crochet {
+            position: absolute;
+            top: 2700px;
+            left: 900px;
+            width: 25%;
+            background-color: white;
+            margin-bottom: 25px;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        div.travel {
+            position: absolute;
+            top: 2700px;
+            left: 245px;
+            width: 25%;
+            background-color: white;
+            margin-bottom: 25px;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        div.read {
+            position: absolute;
+            top: 3200px;
+            left: 245px;
+            width: 25%;
+            background-color: white;
+            margin-bottom: 25px;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        div.games {
+            position: absolute;
+            top: 3200px;
+            left: 900px;
+            width: 25%;
+            background-color: white;
+            margin-bottom: 25px;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        div.container {
+            text-align: center;
+            padding: 10px 20px;
+            font-family: 'Ink Free';
+            font-size: 30px;
+        }
+
 
         @keyframes jiggle {
             50% {
@@ -339,7 +424,7 @@
 
         footer {
             position: absolute;
-            top: 2500px;
+            top: 4000px;
             width: 1505px;
             height: 250px;
             font-family: 'Ink Free';
@@ -359,10 +444,13 @@
         function langCourseScroll() {
             document.documentElement.scrollTop = 1650;
         }
+        function aboutScroll() {
+            document.documentElement.scrollTop = 2490;
+        }
 
         var ev_other = 2;
         $(document).ready(function () {
-            $(".hello, .contact, .pic, .work, .languages, .coursework").each(function () {
+            $(".hello, .contact, .pic, .work, .languages, .coursework, .crochet, .travel, .read, .games, .about").each(function () {
                 ev_other++;
                 var obj_top = $(this).position().top;
                 var window_end = $(window).scrollTop() + $(window).height();
@@ -382,7 +470,7 @@
 
         $(document).ready(function () {
             $(window).scroll(function () {
-                $(".hello, .contact, .pic, .work, .languages, .coursework").each(function () {
+                $(".hello, .contact, .pic, .work, .languages, .coursework, .crochet, .travel, .read, .games, .about").each(function () {
                     ev_other++;
                     var obj_top = $(this).position().top;
                     var window_end = $(window).scrollTop() + $(window).height();
@@ -417,8 +505,11 @@
     <button class="lang_course_Button" onclick="langCourseScroll()">
         Languages / Coursework
     </button>
-    <!--<p><a href="https://www.google.com/">Google</a></p>
-    <button onclick="document.location='default.asp'">HTML Tutorial</button>-->
+    
+    <button class="about_Button" onclick="aboutScroll()">
+        About
+    </button>
+
     <button class="resumeButton" onclick= "document.location='http://www.keepandshare.com/doc29/view.php?id=111180&da=y'">Resume</a>
     </button>
 
@@ -562,6 +653,35 @@
             </li>
         </ul>
     </div>
+    <div class = "about">
+        I love to...
+    </div>
+    <div class="crochet">
+        <img src="crochet.jpg" alt="5 Terre" style="width:100%">
+        <div class="container">
+            Crochet
+        </div>
+      </div>
+
+    <div class="travel">
+        <img src="travel.jpg" alt="5 Terre" style="width:100%">
+        <div class="container">
+            Travel
+        </div>
+    </div>
+    <div class="read">
+        <img src="Reading.jpg" alt="5 Terre" style="width:100%">
+        <div class="container">
+            Read
+        </div>
+    </div>
+    <div class="games">
+        <img src="Catan.jpg" alt="5 Terre" style="width:100%">
+        <div class="container">
+            Play Strategy Games
+        </div>
+    </div>
+      
     <footer>
         <p>
             Thanks for visiting!
